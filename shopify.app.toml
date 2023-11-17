@@ -1,3 +1,28 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+name = "shop-app"
+client_id = "c38435c5bde87de673bd457e60a811e3"
+application_url = "https://cat-usr-procedures-tell.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://cat-usr-procedures-tell.trycloudflare.com/auth/callback",
+  "https://cat-usr-procedures-tell.trycloudflare.com/auth/shopify/callback",
+  "https://cat-usr-procedures-tell.trycloudflare.com/api/auth/callback",
+  "https://cat-usr-procedures-tell.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-bda257f0.myshopify.com"
